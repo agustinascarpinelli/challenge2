@@ -1,5 +1,17 @@
+:root{
+  --grey:rgba(229, 229, 229, 1);
+  --black:rgba(54, 53, 55, 1);
+  --white:rgba(221, 225, 228, 1);
+  --orange:rgba(239, 131, 84, 1);
+  --yellow:rgba(254, 215, 102, 1);
+}
+
+
 .App {
-  text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
 .App-logo {
@@ -35,4 +47,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+body{
+  background:-webkit-linear-gradient(0deg ,rgba(54, 53, 55, 0.64) 0%,
+  rgba(84, 109, 239, 0.86)86%);
+  color: var(--black)
+ 
 }

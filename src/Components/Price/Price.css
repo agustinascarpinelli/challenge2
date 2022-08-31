@@ -1,0 +1,43 @@
+.itemDescription{
+    font-size:14px;
+    text-align: center;
+    font-weight: 300;
+    line-height:16.41px;
+    text-align: center;
+}
+
+ .itemName{
+    font-weight: 700;
+    font-size:36px;
+    line-height:42.19px;
+    text-align: center;
+}
+
+.price{
+    background-color:var(--white) ;
+    height:308px;
+    width:328px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    top: 12px;
+    left: 325px;
+    position: absolute;
+}
+
+.total >p{
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+width:290px;
+height:30px;
+}
+
+.total >h6{
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+width:290px;
+height:43px
+}

@@ -1,0 +1,22 @@
+.carousel-item >img{
+    width:241px;
+    height:216px;
+}
+.carousel-indicators [data-bs-target] {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--white)
+}
+.carousel-dark .carousel-indicators [data-bs-target]{
+    background-color: var(--orange)
+}
+
+.carousel{
+    width: 262px; 
+    height: 262px;
+    background-color:var(--grey);
+    border-radius: 10px;
+  
+}
+

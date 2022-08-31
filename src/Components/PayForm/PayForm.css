@@ -1,0 +1,61 @@
+.payform{
+    width:446px;
+    height:493px;
+    
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;}
+
+.form >input{
+    background-color: transparent;
+    border:none;
+    border-color: none;
+    background-color: none;
+}
+
+.logo{
+    width: 73px;
+    height: 44px;
+}
+
+.cardInp{
+    display: flex;
+    flex-direction: row;
+    width:446px;
+    height:64px;
+    background-color: var(--grey);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+
+    box-shadow:inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+
+}
+
+.cardInp >input{
+    background-color: transparent;
+    border:none;
+    border-color: none;
+    background-color: none;
+    padding: 2px;
+    margin: 1px;
+   
+}
+
+.button{
+    background-color: #546DEF;
+    text-transform: uppercase;
+    width:378px;
+    height:61px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+}
