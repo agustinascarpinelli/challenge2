@@ -1,10 +1,12 @@
 .carousel-item >img{
-    width:241px;
-    height:216px;
+    width:192.8px;
+    height:172.8px;
+
+   
 }
 .carousel-indicators [data-bs-target] {
-    width: 16px;
-    height: 16px;
+    width: 12.8px;
+    height: 12.8px;
     border-radius: 50%;
     background-color: var(--white)
 }
@@ -13,10 +15,13 @@
 }
 
 .carousel{
-    width: 262px; 
-    height: 262px;
-    background-color:var(--grey);
+    width: 209.6px; 
+    height: 209.6px;
+    background-color:#FFFFFF;
     border-radius: 10px;
+    top:34.4px;
+    left: 73.6px;
+    position: absolute;
+
   
 }
-

@@ -20,6 +20,7 @@ catch(error){
 }
 }
 useEffect(()=>{
+  getPrice()
   const interval=setInterval(()=>{
     getPrice()
   },5000)

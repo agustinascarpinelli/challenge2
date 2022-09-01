@@ -1,5 +1,6 @@
 :root{
   --grey:rgba(229, 229, 229, 1);
+  --background:#E5E5E5;
   --black:rgba(54, 53, 55, 1);
   --white:rgba(221, 225, 228, 1);
   --orange:rgba(239, 131, 84, 1);
@@ -8,9 +9,11 @@
 
 
 .App {
-display: flex;
-justify-content: center;
-align-items: center;
+position: relative;
+background:-webkit-linear-gradient(0deg ,rgba(54, 53, 55, 0.64) 0%,
+rgba(84, 109, 239, 0.86)86%);
+width: 100vw;
+height: 100vh;
 
 }
 
@@ -49,8 +52,12 @@ align-items: center;
   }
 }
 body{
-  background:-webkit-linear-gradient(0deg ,rgba(54, 53, 55, 0.64) 0%,
-  rgba(84, 109, 239, 0.86)86%);
+ min-height: 100%;
   color: var(--black)
  
+}
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

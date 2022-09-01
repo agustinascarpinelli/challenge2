@@ -5,7 +5,7 @@ import amex from '../../img/amex.svg'
 import diners from '../../img/diners.svg'
 import master from '../../img/mastercard.svg'
 import creditcard from '../../img/credit-card-solid.svg'
-import {useNavigate} from 'react-router-dom'
+/*import {useNavigate} from 'react-router-dom'*/
 import { 
   isValid, 
   isExpirationDateValid, 
@@ -16,7 +16,7 @@ import {
 export const PayForm = () => {
 const [success, setSuccess]=useState("")
 const [error,setError]=useState("")
-const [creditCard,setCreditCart]=useState("")
+const [creditCard/*,setCreditCard*/]=useState("")
 const[creditLogo,setCreditLogo]=useState("")
 const[errorMsg,setErrorMsg]=useState("")
 const[creditNumber,setCreditNumber]=useState(null)
@@ -89,17 +89,17 @@ else{
     <form className='form' onSubmit={cashout}>
 
   
-    <label for="cardNumber" className="form-label">Card Number</label>
+    <label for="cardNumber">Card Number</label>
    <div className='cardInp'><input type="text" maxLength="16" placeholder="0000 - 0000 - 0000 - 0000" id="cardNumber" onChange={(e)=>validateCreditCardNumber(e.target.value)} />{creditLogo? <img className="logo" src={creditLogo} alt={creditCard}/> : <img className="logo" src={creditcard} alt={creditCard}/>}</div> 
     {errorMsg? <span>{errorMsg}</span>:<span></span>}
  
  
-    <label for="expirationDate" className="form-label">MM/YY</label>
+    <label className ="labelInp" for="expirationDate">MM/YY</label>
  <div className='cardInp'><input type="text" maxlength="4"  placeholder="00/00" id="expirationMonth" onChange={e=>setExpiration(e.target.value)}/>  </div>
 
 
-    <label className="form-label" for="code">CVC Code</label>
-    <div className='cardInp'><input type="text" maxlength="3" placeholder="000" className="form-control" id="code" onChange={e=>setCvc(e.target.value)}/></div>
+    <label className ="labelInp" for="code">CVC Code</label>
+    <div className='cardInp'><input  type="text" maxlength="3" placeholder="000"  id="code" onChange={e=>setCvc(e.target.value)}/></div>
 
 
   <div >
