@@ -1,9 +1,9 @@
 .payform{
-    width:356.8px;
-    height:394.4px;
+    width:22.3rem;
+    height:24.6rem;
     position: absolute;
-    left: 292.8px;
-    top: 74.4px;
+    left: 18.3rem;
+    top: 4.6rem;
     
 }
 
@@ -23,35 +23,35 @@
 }
 
 .logo{
-    width: 58.4px;
-    height: 35.2px;
+    width: 3.65rem;
+    height: 2.2rem;
 }
 
 .cardInp{
     display: flex;
     flex-direction: row;
-    width:356.8px;
-    height:51.2px;
+    width:22.3rem;
+    height:3.2rem;
     background-color: var(--grey);
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 0.6rem;
     box-shadow:inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-top: 11.2px;
+    margin-top: 0.7rem;
 
 }
 .labelInp{
-    margin-top: 28px;
+    margin-top: 1.75rem;
 }
 .cardInp >input{
     background-color: transparent;
     border:none;
     border-color: none;
     background-color: none;
-   margin-top:12px ;
-   margin-bottom:18.4px ;
-   margin-left: 8.8px;
-   width: 180px;
+   margin-top:0.75rem ;
+   margin-bottom:1.15rem ;
+   margin-left: 0.55rem;
+   width: 11.5rem;
    outline: none;
 
    
@@ -60,14 +60,14 @@
 .button{
     background-color: #546DEF;
     text-transform: uppercase;
-    width:302.4px;
-    height:48.8px;
+    width:18.9rem;
+    height:3rem;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
-    font-size: 24px;
-    border-radius: 10px;
+    font-size: 1.5rem;
+    border-radius: 0.6rem;
     border: none;
-    margin-top: 40.8px;
-    margin-left: 27.2px;
+    margin-top: 2.55rem;
+    margin-left: 1.7rem;
 }

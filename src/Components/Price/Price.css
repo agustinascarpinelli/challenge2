@@ -1,43 +1,43 @@
 .itemDescription{
-    font-size:11.2px;
+    font-size:0.7rem;
     text-align: center;
     font-weight: 300;
-    line-height:13.1px;
+    line-height:0.82rem;
     text-align: center;
 }
 
  .itemName{
     font-weight: 700;
-    font-size:28.8px;
-    line-height:33.8px;
+    font-size:1.8rem;
+    line-height:2.1rem;
     text-align: center;
 }
 
 .price{
     background-color:var(--background) ;
-    height:246.4px;
-    width:262.4px;
+    height:15.4rem;
+    width:16.4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-radius: 10px;
-    top: 281.6px;
-    left: 9.6px;
+    border-radius: 0.6rem;
+    top: 17.6rem;
+    left: 0.6rem;
     position: absolute;
 }
 
 .total >p{
 font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-width:232px;
-height:24px;
+font-size: 1rem;
+line-height: 1.5rem;
+width:14.5rem;
+height:1.5rem;
 }
 
 .total >h6{
 font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-width:232px;
-height:34.4px
+font-size: 1rem;
+line-height: 1.5rem;
+width:14.5rem;
+height:2.15rem
 }

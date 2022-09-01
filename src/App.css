@@ -57,7 +57,18 @@ body{
  
 }
 * { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+  text-align: center;
+  width: 45.2rem;;
+  height: 33.5rem;
+  background-color: var(--grey);
+  border-radius: 1.25rem;
+  left: 22vw;
+  position: absolute;
+  top: 12vh;
+  
 }

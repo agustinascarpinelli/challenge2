@@ -5,13 +5,16 @@ import amex from '../../img/amex.svg'
 import diners from '../../img/diners.svg'
 import master from '../../img/mastercard.svg'
 import creditcard from '../../img/credit-card-solid.svg'
-/*import {useNavigate} from 'react-router-dom'*/
+import {useNavigate} from 'react-router-dom'
 import { 
   isValid, 
   isExpirationDateValid, 
   isSecurityCodeValid, 
   getCreditCardNameByNumber 
 } from 'creditcard.js'
+import Swal from 'sweetalert2'
+
+
 
 export const PayForm = () => {
 const [success, setSuccess]=useState("")
@@ -22,7 +25,7 @@ const[errorMsg,setErrorMsg]=useState("")
 const[creditNumber,setCreditNumber]=useState(null)
 const[expiration,setExpiration]=useState("")
 const[cvc,setCvc]=useState(null)
-/*const history=useNavigate()/*/
+const history=useNavigate()
 
 
 const validateCreditCardNumber=(value)=>{
@@ -69,9 +72,21 @@ console.log(expirationYear)
   if(validateCreditCardNumber(creditNumber) && isSecurityCodeValid(creditNumber,cvc) &&(isExpirationDateValid(expirationMonth,expirationYear))){
   setSuccess("Your order has been carried out successfully")
   setError("")
-  /*setTimeout(()=>{
+ 
+    Swal.fire({
+    icon:'success',
+    iconColor:'rgba(254, 215, 102, 1)',
+    title:'Thanks for your purchase',
+    background:'#E5E5E5',
+    timer: 3000,
+    showConfirmButton:false,
+    color:'rgba(54, 53, 55, 1)'
+      }
+      )
+  
+  setTimeout(()=>{
     history('/')
-  },8000)*/
+  },5000)
 }
 else{
   setError("Please, enter a valid credit card")
