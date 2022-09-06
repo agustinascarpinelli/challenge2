@@ -14,7 +14,7 @@ import {
 } from "creditcard.js";
 import Swal from "sweetalert2";
 import InputMask from "react-input-mask";
-import { useSelector } from "react-redux";
+/*import { useSelector } from "react-redux";*/
 
 export const PayForm = () => {
   const [error, setError] = useState("");
@@ -25,18 +25,17 @@ export const PayForm = () => {
   const [expiration, setExpiration] = useState("");
   const [cvc, setCvc] = useState(null);
   const history = useNavigate();
-  const { productSelected } = useSelector((state) => state.product.value);
-  const createOrder = () => {
+  /*const { productSelected } = useSelector((state) => state.product.value);*/
+  /*const createOrder = () => {
     const date = new Date();
     const time = date.getTime();
     const order = {
       time: time,
       date: date,
-      totalUSD:'productSelected.price',
-      totaBtc:,
+      total: productSelected.price,
       product: {
-        name: 'productSelected.name',
-        id: 'productSelected.id',
+        name: productSelected.name,
+        id: productSelected.id,
       },
       creditCardData: {
         number: creditNumber,
@@ -44,45 +43,33 @@ export const PayForm = () => {
       },
     };
     return order;
-  };
+  };*/
 
   const validateCreditCardNumber = (value) => {
+    setErrorMsg("")
     let card = getCreditCardNameByNumber(value);
     setCreditCard(card);
     setCreditNumber(value);
-    switch (card) {
-      case "Visa":
-        setCreditLogo(visa);
-        setErrorMsg("");
-        break;
-      case "Mastercard":
-        setCreditLogo(master);
-        setErrorMsg("");
-
-        break;
-      case "Diners":
-        setCreditLogo(diners);
-        setErrorMsg("");
-
-        break;
-      case "American Express":
-        setCreditLogo(amex);
-        setErrorMsg("");
-
-        break;
-      default:
-        setCreditLogo(creditcard);
-        break;
-    }
-    if (
-      (card === "Visa" ||
-        card === "Mastercard" ||
-        card === "Diners" ||
-        card === "American Express") &&
-      isValid(value)
-    ) {
-      setCreditNumber(value);
-      return true;
+    
+    if (card === "Visa" && isValid(value)){ 
+       setCreditLogo(visa)
+       setCreditNumber(value)
+       return true}
+    else if (card === "Mastercard" && isValid(value)){
+       setCreditLogo(master)
+       setCreditNumber(value)
+      return true}
+    else if (card === "Diners" && isValid(value)){
+      setCreditLogo(diners)
+      setCreditNumber(value)
+      return true}
+    else if (card === "American Express" && isValid(value)){
+      setCreditLogo(amex)
+      setCreditNumber(value)
+      return true
+      
+      
+  
     } else {
       return false;
     }
@@ -97,8 +84,8 @@ export const PayForm = () => {
       isExpirationDateValid(expirationMonth, expirationYear)
     ) {
       setError("");
-      let newOrder = createOrder();
-      localStorage.setItem("orders", JSON.stringify(newOrder));
+     /* let newOrder = createOrder();
+      localStorage.setItem("orders", JSON.stringify(newOrder));*/
 
       Swal.fire({
         icon: "success",
@@ -112,7 +99,13 @@ export const PayForm = () => {
       setTimeout(() => {
         history("/");
       }, 5000);
-    } else {
+    } 
+   
+    else if(!isValid(creditNumber)){
+      setErrorMsg("*not valid credit card number")
+    }
+
+      else {
       setError("Please, enter a valid credit card");
     }
   };
@@ -139,7 +132,7 @@ export const PayForm = () => {
             <img className="logo" src={creditcard} alt={creditCard} />
           )}
         </div>
-        {errorMsg ? <span>{errorMsg}</span> : <span></span>}
+        {errorMsg ? <span className="error">{errorMsg}</span> : <span></span>}
 
         <label className="labelInp" for="expirationDate">
           MM/YY
@@ -152,6 +145,7 @@ export const PayForm = () => {
             onChange={(e) => setExpiration(e.target.value)}
           />{" "}
         </div>
+        
 
         <label className="labelInp" for="code">
           CVC Code
@@ -164,6 +158,8 @@ export const PayForm = () => {
             onChange={(e) => setCvc(e.target.value)}
           />
         </div>
+        
+
 
         <div>
           <button type="submit" className="button">

@@ -15,14 +15,14 @@ También se podrá ver si hay errores en la consola.
 
 ***
 
- ### Challenge
+ ### Sobre el proyecto:
 
-Este es un proyecto creado integramente con React.js.Es totalmente resposive y simula ser una pasarla de pagos que toma datos de la API 'blockchain' para calcular el precio del producto (que es originalmente en dolares), en BTC. Tambien cuenta con un formulario de pago que requiere el numero de tarjeta de credito, la fecha de vencimiento y el codigo de seguridad y todos deben ser a su vez validos para poder ser aceptado el pago.
+Este es un proyecto creado integramente con React.js. Es totalmente resposive y simula ser una pasarla de pagos que toma datos de la API 'blockchain' para calcular el precio del producto (que es originalmente en dolares), en BTC. Tambien cuenta con un formulario de pago que requiere el numero de tarjeta de credito, la fecha de vencimiento y el codigo de seguridad y todos deben ser a su vez validos para poder ser aceptado el pago.
 El diseño del proyecto fue basado en este [Figma](https://www.figma.com/file/6BTEAzFqDi4KTVLHrFN6Ji/Checkout-Page-(Community)?node-id=2%3A2).
 
 ***
 
-### Dependencias
+## Dependencias
 
 Para realizar el proyecto se utilizaron las siguientes dependencias:
 * `creditcard.js:` Posee funciones que validan la tarjeta de credito, validan el codigo se seguridad y la fecha de vencimiento y obtienen la compañia segun el numero de la tarjeta.
@@ -36,7 +36,7 @@ Para realizar el proyecto se utilizaron las siguientes dependencias:
 
 ***
 
-### Componentes
+## Componentes
 
 * **Background:**
   * **Div:** Componente utilizado para el estilo del fondo de la aplicacion (franja amarilla del fondo del div).
@@ -50,11 +50,11 @@ Para realizar el proyecto se utilizaron las siguientes dependencias:
   * **Checkout:** Componente que se encuentra en la ruta **'/checkout'**. El mismo renderiza los componentes *Div*, *CloseButton*, *Payform* y *Price* y les provee las props requeridas buscando el estado del producto seleccionado. Si no hay ningun producto seleccionado, y queremos entrar a la ruta de '/checkout' el componente renderiza los componentes *Div*, *CloseButton* y un div con el texto de que no hay ningun producto agregado. 
   * **Purchase:** Componente que se encuentra en la ruta **'/'**. El mismo renderiza los componentes *Div* y *Button*. Le provee el id requerido por Button de manera harcodeada (en este caso, 1).
 
-***Se configuro tambien que en el caso de ingresar a cualquier otra pagina se muestre en pantalla el texto 'NOT FOUND 404'***
+  ***Se configuro tambien que en el caso de ingresar a cualquier otra pagina se muestre en pantalla el texto 'NOT FOUND 404'***
 
 ***
 
-### Funciones del productsReducer:
+## Funciones del reducer:
 
 El ***productsReeducer*** posee un estado cuyo valor inicial de productos son los productos (provenientes de el archivo que se encuentra en 'Data/Products.js' el cual contiene un arreglo de objetos con las propiedades *id*, *name*, *description*, *price* e *img*) y un valor inicial par el producto seleccionado que es un objeto vacio.
 En sus reducers tenemos la funcion ***setProductSelected*** el cual toma el valor inicial de los productos y recibe por payload un id y filtra entre los productos aquel producto que coincida con el id recibido. Una vez hecho esto, el estado del producto seleccionado cambia y pasa a ser ese producto filtrado.
