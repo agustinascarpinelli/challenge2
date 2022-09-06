@@ -25,14 +25,14 @@ El diseño del proyecto fue basado en este [Figma](https://www.figma.com/file/6B
 ### Dependencias
 
 Para realizar el proyecto se utilizaron las siguientes dependencias:
- `creditcard.js:` Posee funciones que validan la tarjeta de credito, validan el codigo se seguridad y la fecha de vencimiento y obtienen la compañia segun el numero de la tarjeta.
- `reactstrap:` Basada en boostrap,para poder usar algunos de sus componentes.
- `sweetalert2:` Utilizado para incluir alertas en la aplicion (alternativas a los alerts de javascript)
- `react-input-mask:` Input masking component for React. Made with attention to UX.
- `react-router-dom:` Utilizado para implementar rutas dinamicas en la aplicacion web.
- `react-icons:` Utilizado para incluir iconos.
- `reduxjs/toolkit:` Utilizado como una herramienta para escribir de manera estandar la logica de redux.
- `react-redux:` Le permite a los componentes de react leer data del store de redux y depachar acciones al store para actualizar esa data.
+* `creditcard.js:` Posee funciones que validan la tarjeta de credito, validan el codigo se seguridad y la fecha de vencimiento y obtienen la compañia segun el numero de la tarjeta.
+* `reactstrap:` Basada en boostrap,para poder usar algunos de sus componentes.
+* `sweetalert2:` Utilizado para incluir alertas en la aplicion (alternativas a los alerts de javascript)
+* `react-input-mask:` Input masking component for React. Made with attention to UX.
+* `react-router-dom:` Utilizado para implementar rutas dinamicas en la aplicacion web.
+* `react-icons:` Utilizado para incluir iconos.
+* `reduxjs/toolkit:` Utilizado como una herramienta para escribir de manera estandar la logica de redux.
+* `react-redux:` Le permite a los componentes de react leer data del store de redux y depachar acciones al store para actualizar esa data.
 
 ***
 
