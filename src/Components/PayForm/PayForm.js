@@ -101,13 +101,17 @@ export const PayForm = () => {
       }, 5000);
     } 
    
-    else if(!isValid(creditNumber)){
-      setErrorMsg("*not valid credit card number")
-    }
+
 
       else {
-      setError("Please, enter a valid credit card");
-    }
+   
+          setError("Please, enter a valid credit card")
+          if(!validateCreditCardNumber(creditNumber)){
+            setErrorMsg("*not valid credit card number")
+          }
+        }
+      
+    
   };
 
   const cashout = (e) => {
